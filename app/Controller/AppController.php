@@ -34,15 +34,25 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
   public $components = array(
+      'Acl',
       'Session',
       'Auth' => array(
           'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
-          'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+          'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
+//          'authorize' => array(
+//              'Actions' => array('actionPath' => 'controllers')
+//          )
       )
   );
 
   public function beforeFilter() {
     $this->Auth->allow('index', 'view');
+    $this->Auth->authenticate = array(
+        'Form' => array(
+            'userModel' => 'Users.User',
+            'scope' => array('User.active' => 1)
+        )
+    );
   }
 
 }
