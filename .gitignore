@@ -1,2 +1,4 @@
 /app/tmp/*
 /app/Config/database.php
+cakephp_git_starter.sh
+cakephp/*
