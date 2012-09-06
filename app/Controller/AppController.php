@@ -39,20 +39,28 @@ class AppController extends Controller {
       'Auth' => array(
           'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
           'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
-//          'authorize' => array(
-//              'Actions' => array('actionPath' => 'controllers')
-//          )
+          'authorize' => 'Controller'
       )
   );
 
+  public function isAuthorized($user = null) {
+    if(!$this->request->url){ //La URL base. Es decir, la home.
+      return true;
+    }
+    if(!empty($user) && $this->Acl->check($user, 'root')){
+      return true;
+    }
+    return false;
+  }
+
   public function beforeFilter() {
-    $this->Auth->allow('index', 'view');
-    $this->Auth->authenticate = array(
-        'Form' => array(
-            'userModel' => 'Users.User',
-            'scope' => array('User.active' => 1)
-        )
-    );
+//    $this->Auth->allow('home');
+//    $this->Auth->authenticate = array(
+//        'Form' => array(
+//            'userModel' => 'Users.User',
+//            'scope' => array('User.active' => 1)
+//        )
+//    );
   }
 
 }

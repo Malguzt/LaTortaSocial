@@ -15,8 +15,8 @@ class User extends AppModel {
    * @var string
    */
   public $displayField = 'username';
+  public $actsAs = array('Acl' => array('type' => 'both'));
   public $name = 'User';
-  
   public $validate = array(
       'username' => array(
           'required' => array(
@@ -54,6 +54,21 @@ class User extends AppModel {
       $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
     }
     return true;
+  }
+
+  function parentNode() {
+    if (!$this->id && empty($this->data)) {
+      return null;
+    }
+    $data = $this->data;
+    if (empty($this->data)) {
+      $data = $this->read();
+    }
+    if (!$data['User']['group_id']) {
+      return null;
+    } else {
+      return array('Group' => array('id' => $data['User']['group_id']));
+    }
   }
 
 }

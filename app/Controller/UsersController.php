@@ -11,7 +11,7 @@ class UsersController extends AppController {
 
   public function beforeFilter() {
     parent::beforeFilter();
-    $this->Auth->allow('add'); // Letting users register themselves
+    $this->Auth->allow('add', 'login', 'logout'); // Letting users register themselves
   }
 
   public function login() {
@@ -19,7 +19,7 @@ class UsersController extends AppController {
       if ($this->Auth->login()) {
         $this->redirect($this->Auth->redirect());
       } else {
-        $this->Session->setFlash(__('Invalid username or password, try again'));
+        $this->Session->setFlash(__('Estemmm, como que no estas escribiendo bien che.'));
       }
     }
   }
@@ -60,8 +60,12 @@ class UsersController extends AppController {
    */
   public function add() {
     if ($this->request->is('post')) {
+      if (empty($this->request->data['User']['group_id'])) {
+        $this->request->data['User']['group_id'] = $this->User->Group->field('id', array('name' => 'Jugador'));
+      }
       $this->User->create();
       if ($this->User->save($this->request->data)) {
+        $this->Acl->allow(array('User' => array('id' => $this->User->id)), array('User' => array('id' => $this->User->id)));
         $this->Session->setFlash(__('The user has been saved'));
         $this->redirect(array('action' => 'index'));
       } else {

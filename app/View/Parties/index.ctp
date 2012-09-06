@@ -34,5 +34,6 @@
 <nav>
   <ul>
     <li><?php echo $this->Html->link(__('Nueva partida'), array('action' => 'add')); ?></li>
+    <li><?php echo $this->Html->link(__('Inicio'), '/'); ?></li>
   </ul>
 </nav>

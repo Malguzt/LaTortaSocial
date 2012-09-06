@@ -1,0 +1,2 @@
+ <?php echo $this->Html->link(__('Crear partida'), array('controller' => 'Parties', 'action' => 'add')); ?>
+ <?php echo $this->Html->link(__('Ver partidas'), array('controller' => 'Parties', 'action' => 'index')); ?>

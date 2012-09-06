@@ -7,7 +7,10 @@
       <section id="user">
         <?php // debug($this->Session->read()) ?>
         <?php if ($this->Session->read('Auth.User')): ?>
-          <?php echo $this->Html->link('Salir', '/Users/logout'); ?>
+          <section>
+            <?php echo $this->Html->link($this->Session->read('Auth.User.username'), array('controller' => 'Users', 'action' => 'view', $this->Session->read('Auth.User.id'))); ?><br />
+            <?php echo $this->Html->link('Salir', '/Users/logout'); ?>
+          </section>
         <?php endif; ?>
       </section>
     </header>

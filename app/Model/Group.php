@@ -15,7 +15,7 @@ class Group extends AppModel {
    * @var string
    */
   public $displayField = 'name';
-
+  public $actsAs = array('Acl' => array('type' => 'both'));
 
   //The Associations below have been created with all possible keys, those that are not needed can be removed
 
@@ -39,9 +39,9 @@ class Group extends AppModel {
           'counterQuery' => ''
       )
   );
-
-  public function parentNode() {
-    return null;
-  }
+  
+  function parentNode() {
+    return 'root';
+}
 
 }

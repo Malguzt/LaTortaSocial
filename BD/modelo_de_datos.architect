@@ -4,9 +4,18 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="PlayPen Database" />
+   <property key="Logical" value="tortaRolera" />
+   <property key="Connection Type" value="MySQL" />
+   <property key="JDBC URL" value="jdbc:mysql://192.168.1.101:3306/torta_social" />
+   <property key="UID" value="torta" />
+   <property key="PWD" value="tLGjhArhh3ucuN9x" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
   </data-source>
-  <data-source id="DS2">
+  <data-source id="DS0">
    <property key="Connection Type" value="MySQL" />
    <property key="Logical" value="tortaRolera" />
    <property key="JDBC URL" value="jdbc:mysql://192.168.1.101:3306/torta_social" />
@@ -20,32 +29,32 @@
   </data-source>
  </project-data-sources>
  <source-databases>
-  <database id="DB0" populated="true" UUID="8b4a49ea-39f9-4683-b195-236994a9cd94" dbcs-ref="DS2" name="tortaRolera" physicalName="tortaRolera" >
+  <database id="DB0" populated="true" UUID="8b4a49ea-39f9-4683-b195-236994a9cd94" dbcs-ref="DS0" name="tortaRolera" physicalName="tortaRolera" >
    <catalog id="CAT1" populated="false" UUID="ca42255c-f67a-442f-b061-74d11e4c9e8d" name="information_schema" nativeTerm="database" physicalName="information_schema" >
    </catalog>
    <catalog id="CAT2" populated="true" UUID="8d7558f3-faba-48fe-a60e-9b40d8b17e78" name="torta_social" nativeTerm="database" physicalName="torta_social" >
     <table id="TAB3" populated="true" UUID="734540d5-9eaf-4dfa-9082-772c27a805b9" name="acos" objectType="TABLE" physicalName="acos" >
      <remarks></remarks>
      <folder id="FOLTAB31" populated="true" name="Columns" physicalName="Columns" type="1">
-      <column id="COL4" populated="true" UUID="6c982f23-3aa6-4f61-83dd-08b0842d6c63" autoIncrement="true" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL4" populated="true" UUID="6c982f23-3aa6-4f61-83dd-08b0842d6c63" autoIncrement="true" defaultValue="" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL5" populated="true" UUID="7e9946a9-c2a0-43cd-b26e-aa85fc0e9c2f" autoIncrement="false" name="parent_id" nullable="1" physicalName="parent_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL5" populated="true" UUID="7e9946a9-c2a0-43cd-b26e-aa85fc0e9c2f" autoIncrement="false" defaultValue="" name="parent_id" nullable="1" physicalName="parent_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL6" populated="true" UUID="1609f0a2-e494-41b1-8b90-67223b4ee091" autoIncrement="false" name="model" nullable="1" physicalName="model" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
+      <column id="COL6" populated="true" UUID="1609f0a2-e494-41b1-8b90-67223b4ee091" autoIncrement="false" defaultValue="" name="model" nullable="1" physicalName="model" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
        <remarks></remarks>
       </column>
-      <column id="COL7" populated="true" UUID="c5390807-4712-47c7-b303-5a2915d560bc" autoIncrement="false" name="foreign_key" nullable="1" physicalName="foreign_key" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL7" populated="true" UUID="c5390807-4712-47c7-b303-5a2915d560bc" autoIncrement="false" defaultValue="" name="foreign_key" nullable="1" physicalName="foreign_key" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL8" populated="true" UUID="45e71c72-d3a5-429e-a5de-45b81e7d0911" autoIncrement="false" name="alias" nullable="1" physicalName="alias" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
+      <column id="COL8" populated="true" UUID="45e71c72-d3a5-429e-a5de-45b81e7d0911" autoIncrement="false" defaultValue="" name="alias" nullable="1" physicalName="alias" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
        <remarks></remarks>
       </column>
-      <column id="COL9" populated="true" UUID="372d2be9-0475-4d8d-a91f-4296ae78094c" autoIncrement="false" name="lft" nullable="1" physicalName="lft" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL9" populated="true" UUID="372d2be9-0475-4d8d-a91f-4296ae78094c" autoIncrement="false" defaultValue="" name="lft" nullable="1" physicalName="lft" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL10" populated="true" UUID="45d6afc0-db08-4251-b019-4ca7b6aea3db" autoIncrement="false" name="rght" nullable="1" physicalName="rght" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL10" populated="true" UUID="45d6afc0-db08-4251-b019-4ca7b6aea3db" autoIncrement="false" defaultValue="" name="rght" nullable="1" physicalName="rght" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
       </folder>
@@ -62,25 +71,25 @@
     <table id="TAB13" populated="true" UUID="ca54e361-8fe0-4b02-94d4-314231a63361" name="aros" objectType="TABLE" physicalName="aros" >
      <remarks></remarks>
      <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
-      <column id="COL14" populated="true" UUID="1f566706-68b5-4e1f-8f40-c1fa8e4bc9c8" autoIncrement="true" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL14" populated="true" UUID="1f566706-68b5-4e1f-8f40-c1fa8e4bc9c8" autoIncrement="true" defaultValue="" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL15" populated="true" UUID="4072da7e-193d-4c6b-a8eb-a1fcb7e81e48" autoIncrement="false" name="parent_id" nullable="1" physicalName="parent_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL15" populated="true" UUID="4072da7e-193d-4c6b-a8eb-a1fcb7e81e48" autoIncrement="false" defaultValue="" name="parent_id" nullable="1" physicalName="parent_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL16" populated="true" UUID="9df2aa04-0375-4b8d-ae50-af817f96d839" autoIncrement="false" name="model" nullable="1" physicalName="model" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
+      <column id="COL16" populated="true" UUID="9df2aa04-0375-4b8d-ae50-af817f96d839" autoIncrement="false" defaultValue="" name="model" nullable="1" physicalName="model" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
        <remarks></remarks>
       </column>
-      <column id="COL17" populated="true" UUID="f6af5a8e-68e9-40b1-9757-f6017f3169db" autoIncrement="false" name="foreign_key" nullable="1" physicalName="foreign_key" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL17" populated="true" UUID="f6af5a8e-68e9-40b1-9757-f6017f3169db" autoIncrement="false" defaultValue="" name="foreign_key" nullable="1" physicalName="foreign_key" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL18" populated="true" UUID="d577c8d6-f9be-43c3-aa61-f752ec8b1aa0" autoIncrement="false" name="alias" nullable="1" physicalName="alias" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
+      <column id="COL18" populated="true" UUID="d577c8d6-f9be-43c3-aa61-f752ec8b1aa0" autoIncrement="false" defaultValue="" name="alias" nullable="1" physicalName="alias" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
        <remarks></remarks>
       </column>
-      <column id="COL19" populated="true" UUID="0af33cbf-f106-4d65-9a3a-6f56f0246c54" autoIncrement="false" name="lft" nullable="1" physicalName="lft" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL19" populated="true" UUID="0af33cbf-f106-4d65-9a3a-6f56f0246c54" autoIncrement="false" defaultValue="" name="lft" nullable="1" physicalName="lft" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL20" populated="true" UUID="ac882e76-d594-414c-82fc-f077e6e30c39" autoIncrement="false" name="rght" nullable="1" physicalName="rght" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL20" populated="true" UUID="ac882e76-d594-414c-82fc-f077e6e30c39" autoIncrement="false" defaultValue="" name="rght" nullable="1" physicalName="rght" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
       </folder>
@@ -97,13 +106,13 @@
     <table id="TAB23" populated="true" UUID="1fa85aee-5f04-4f17-9d59-346827a110fb" name="aros_acos" objectType="TABLE" physicalName="aros_acos" >
      <remarks></remarks>
      <folder id="FOLTAB231" populated="true" name="Columns" physicalName="Columns" type="1">
-      <column id="COL24" populated="true" UUID="3b58661f-1890-4b94-a85a-0647191a5afc" autoIncrement="true" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL24" populated="true" UUID="3b58661f-1890-4b94-a85a-0647191a5afc" autoIncrement="true" defaultValue="" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL25" populated="true" UUID="23a8eeee-3349-4aef-8f25-3b4c3f9708d0" autoIncrement="false" name="aro_id" nullable="0" physicalName="aro_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL25" populated="true" UUID="23a8eeee-3349-4aef-8f25-3b4c3f9708d0" autoIncrement="false" defaultValue="" name="aro_id" nullable="0" physicalName="aro_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL26" populated="true" UUID="bb2f15f1-3ba3-492b-819e-2962b04cfea8" autoIncrement="false" name="aco_id" nullable="0" physicalName="aco_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL26" populated="true" UUID="bb2f15f1-3ba3-492b-819e-2962b04cfea8" autoIncrement="false" defaultValue="" name="aco_id" nullable="0" physicalName="aco_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
       <column id="COL27" populated="true" UUID="ca3e74c5-4c9b-4279-bb19-37fd84ac4054" autoIncrement="false" defaultValue="&apos;0&apos;" name="_create" nullable="0" physicalName="_create" precision="2" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
@@ -136,16 +145,16 @@
     <table id="TAB36" populated="true" UUID="d128cd87-f4a6-4c46-a127-23dd7359e51b" name="groups" objectType="TABLE" physicalName="groups" >
      <remarks></remarks>
      <folder id="FOLTAB361" populated="true" name="Columns" physicalName="Columns" type="1">
-      <column id="COL37" populated="true" UUID="eacbc894-4158-4d55-a59b-0f67e866cbfb" autoIncrement="true" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL37" populated="true" UUID="eacbc894-4158-4d55-a59b-0f67e866cbfb" autoIncrement="true" defaultValue="" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL38" populated="true" UUID="ac959a4f-7ac6-4e0b-83af-6654e03a7446" autoIncrement="false" name="name" nullable="0" physicalName="name" precision="100" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
+      <column id="COL38" populated="true" UUID="ac959a4f-7ac6-4e0b-83af-6654e03a7446" autoIncrement="false" defaultValue="" name="name" nullable="0" physicalName="name" precision="100" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
        <remarks></remarks>
       </column>
-      <column id="COL39" populated="true" UUID="febec31f-b8c1-4717-a470-9296e3c210df" autoIncrement="false" name="created" nullable="1" physicalName="created" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
+      <column id="COL39" populated="true" UUID="febec31f-b8c1-4717-a470-9296e3c210df" autoIncrement="false" defaultValue="" name="created" nullable="1" physicalName="created" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
        <remarks></remarks>
       </column>
-      <column id="COL40" populated="true" UUID="24d7488a-7a36-41a5-8717-1e20796f6707" autoIncrement="false" name="modified" nullable="1" physicalName="modified" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
+      <column id="COL40" populated="true" UUID="24d7488a-7a36-41a5-8717-1e20796f6707" autoIncrement="false" defaultValue="" name="modified" nullable="1" physicalName="modified" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
        <remarks></remarks>
       </column>
       </folder>
@@ -162,22 +171,22 @@
     <table id="TAB43" populated="true" UUID="7acabe63-4c66-4bfe-8693-732f6940eb2e" name="users" objectType="TABLE" physicalName="users" >
      <remarks></remarks>
      <folder id="FOLTAB431" populated="true" name="Columns" physicalName="Columns" type="1">
-      <column id="COL44" populated="true" UUID="87b26e0f-bc04-4008-8ebc-3b1903cb70cb" autoIncrement="true" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL44" populated="true" UUID="87b26e0f-bc04-4008-8ebc-3b1903cb70cb" autoIncrement="true" defaultValue="" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL45" populated="true" UUID="c0ed94e9-5cdd-4e19-8755-2836c17f7127" autoIncrement="false" name="username" nullable="0" physicalName="username" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
+      <column id="COL45" populated="true" UUID="c0ed94e9-5cdd-4e19-8755-2836c17f7127" autoIncrement="false" defaultValue="" name="username" nullable="0" physicalName="username" precision="255" referenceCount="1" scale="0" sourceDataTypeName="VARCHAR" type="12" >
        <remarks></remarks>
       </column>
-      <column id="COL46" populated="true" UUID="af112a24-40a1-413a-9713-3f67541f33d5" autoIncrement="false" name="password" nullable="0" physicalName="password" precision="40" referenceCount="1" scale="0" sourceDataTypeName="CHAR" type="1" >
+      <column id="COL46" populated="true" UUID="af112a24-40a1-413a-9713-3f67541f33d5" autoIncrement="false" defaultValue="" name="password" nullable="0" physicalName="password" precision="40" referenceCount="1" scale="0" sourceDataTypeName="CHAR" type="1" >
        <remarks></remarks>
       </column>
-      <column id="COL47" populated="true" UUID="a450c929-f882-419a-ab49-813c052cb635" autoIncrement="false" name="group_id" nullable="0" physicalName="group_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
+      <column id="COL47" populated="true" UUID="a450c929-f882-419a-ab49-813c052cb635" autoIncrement="false" defaultValue="" name="group_id" nullable="0" physicalName="group_id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="INT" type="4" >
        <remarks></remarks>
       </column>
-      <column id="COL48" populated="true" UUID="ae6bc341-583f-4f18-b4b0-937a41e20d8e" autoIncrement="false" name="created" nullable="1" physicalName="created" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
+      <column id="COL48" populated="true" UUID="ae6bc341-583f-4f18-b4b0-937a41e20d8e" autoIncrement="false" defaultValue="" name="created" nullable="1" physicalName="created" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
        <remarks></remarks>
       </column>
-      <column id="COL49" populated="true" UUID="f0237971-3bb2-4638-863c-40ef66f62e2e" autoIncrement="false" name="modified" nullable="1" physicalName="modified" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
+      <column id="COL49" populated="true" UUID="f0237971-3bb2-4638-863c-40ef66f62e2e" autoIncrement="false" defaultValue="" name="modified" nullable="1" physicalName="modified" precision="19" referenceCount="1" scale="0" sourceDataTypeName="DATETIME" type="93" >
        <remarks></remarks>
       </column>
       </folder>
@@ -212,7 +221,7 @@
     <column id="COL58" populated="true" UUID="3c256c66-5d75-49e8-9e92-e6286a15d38d" autoIncrement="false" defaultValue="" name="model" nullable="1" physicalName="model" precision="255" referenceCount="1" scale="0" source-column-ref="COL6" sourceDataTypeName="VARCHAR" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL59" populated="true" UUID="17501383-88b8-4e31-b70e-b7be595119a4" autoIncrement="false" defaultValue="" name="foreign_key" nullable="1" physicalName="foreign_key" precision="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="INT" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL59" populated="true" UUID="17501383-88b8-4e31-b70e-b7be595119a4" autoIncrement="false" defaultValue="" name="foreign_key" nullable="1" physicalName="foreign_key" precision="36" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="INT" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL60" populated="true" UUID="18955ced-494e-488e-8405-bbbb5019b1aa" autoIncrement="false" defaultValue="" name="alias" nullable="1" physicalName="alias" precision="255" referenceCount="1" scale="0" source-column-ref="COL8" sourceDataTypeName="VARCHAR" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -230,7 +239,7 @@
     <folder id="FOLTAB552" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB554" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX63" populated="true" UUID="eff43cda-650d-440e-9153-69f0e98016fe" clustered="false" name="acos_PK" physicalName="acos_PK" primaryKeyIndex="true" qualifier="" unique="true" >
+    <index id="IDX63" populated="true" UUID="eff43cda-650d-440e-9153-69f0e98016fe" clustered="false" name="acos_PK" physicalName="acos_pk" primaryKeyIndex="true" qualifier="" unique="true" >
      <index-column id="IDC64" populated="true" UUID="5159d0a8-0679-4a05-afcd-867b1ba63d39" ascendingOrDescending="UNSPECIFIED" column-ref="COL56" name="id" physicalName="id" />
     </index>
    </folder>
@@ -247,7 +256,7 @@
     <column id="COL68" populated="true" UUID="d7908c12-c1ec-4150-97e9-25684ac50d6f" autoIncrement="false" defaultValue="" name="model" nullable="1" physicalName="model" precision="255" referenceCount="1" scale="0" source-column-ref="COL16" sourceDataTypeName="VARCHAR" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL69" populated="true" UUID="b0e4ee25-d565-452e-a8fe-ede75db84787" autoIncrement="false" defaultValue="" name="foreign_key" nullable="1" physicalName="foreign_key" precision="0" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="INT" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL69" populated="true" UUID="b0e4ee25-d565-452e-a8fe-ede75db84787" autoIncrement="false" defaultValue="" name="foreign_key" nullable="1" physicalName="foreign_key" precision="36" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="INT" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL70" populated="true" UUID="a50c6e42-914d-48ec-a5ce-7bded7514b3a" autoIncrement="false" defaultValue="" name="alias" nullable="1" physicalName="alias" precision="255" referenceCount="1" scale="0" source-column-ref="COL18" sourceDataTypeName="VARCHAR" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -265,7 +274,7 @@
     <folder id="FOLTAB652" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB654" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX73" populated="true" UUID="6d025ebe-7e09-4925-b1eb-7c5fd1baeed4" clustered="false" name="aros_PK" physicalName="aros_PK" primaryKeyIndex="true" qualifier="" unique="true" >
+    <index id="IDX73" populated="true" UUID="6d025ebe-7e09-4925-b1eb-7c5fd1baeed4" clustered="false" name="aros_PK" physicalName="aros_pk" primaryKeyIndex="true" qualifier="" unique="true" >
      <index-column id="IDC74" populated="true" UUID="19848696-84f3-455b-9fa8-1b38f3304276" ascendingOrDescending="UNSPECIFIED" column-ref="COL66" name="id" physicalName="id" />
     </index>
    </folder>
@@ -300,10 +309,10 @@
     <folder id="FOLTAB752" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB754" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX83" populated="true" UUID="89854ecb-e127-4fd6-8a82-4a280ea13387" clustered="false" name="aros_acos_PK" physicalName="aros_acos_PK" primaryKeyIndex="true" qualifier="" unique="true" >
+    <index id="IDX83" populated="true" UUID="89854ecb-e127-4fd6-8a82-4a280ea13387" clustered="false" name="aros_acos_PK" physicalName="aros_acos_pk" primaryKeyIndex="true" qualifier="" unique="true" >
      <index-column id="IDC84" populated="true" UUID="3ef8da31-6845-4f2a-bf41-697ea8a6f689" ascendingOrDescending="UNSPECIFIED" column-ref="COL76" name="id" physicalName="id" />
     </index>
-    <index id="IDX85" populated="true" UUID="9dc0176f-20cf-4309-874b-b69b63327bcd" clustered="false" index-type="BTREE" name="ARO_ACO_KEY" physicalName="ARO_ACO_KEY" primaryKeyIndex="false" qualifier="" unique="true" >
+    <index id="IDX85" populated="true" UUID="9dc0176f-20cf-4309-874b-b69b63327bcd" clustered="false" index-type="BTREE" name="ARO_ACO_KEY" physicalName="aro_aco_key" primaryKeyIndex="false" qualifier="" unique="true" >
      <index-column id="IDC86" populated="true" UUID="edda21fc-4ed1-4f46-8637-1c79f9f1e6c3" ascendingOrDescending="ASCENDING" column-ref="COL77" name="aro_id" physicalName="aro_id" />
      <index-column id="IDC87" populated="true" UUID="9d48df5d-1e76-4b0a-8ae5-6aae78f0d274" ascendingOrDescending="ASCENDING" column-ref="COL78" name="aco_id" physicalName="aco_id" />
     </index>
@@ -312,7 +321,7 @@
   <table id="TAB88" populated="true" UUID="078f3961-5322-4be7-b876-23a513fe87e6" name="groups" objectType="TABLE" physicalName="groups" >
    <remarks></remarks>
    <folder id="FOLTAB881" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL89" populated="true" UUID="22ac11e9-7705-4e5c-89d7-ae3cc2975adf" autoIncrement="false" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL37" sourceDataTypeName="INT" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL89" populated="true" UUID="22ac11e9-7705-4e5c-89d7-ae3cc2975adf" autoIncrement="false" defaultValue="" name="id" nullable="0" physicalName="id" precision="36" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL37" sourceDataTypeName="INT" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL90" populated="true" UUID="b77531ed-3917-4577-90a9-3955da9e026c" autoIncrement="false" defaultValue="" name="name" nullable="0" physicalName="name" precision="100" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="VARCHAR" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -330,7 +339,7 @@
     <folder id="FOLTAB882" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB884" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX93" populated="true" UUID="f18cc55a-2d5e-4a9a-bbc2-1c75436903dd" clustered="false" name="groups_PK" physicalName="groups_PK" primaryKeyIndex="true" qualifier="" unique="true" >
+    <index id="IDX93" populated="true" UUID="f18cc55a-2d5e-4a9a-bbc2-1c75436903dd" clustered="false" name="groups_PK" physicalName="groups_pk" primaryKeyIndex="true" qualifier="" unique="true" >
      <index-column id="IDC94" populated="true" UUID="fa6f8f83-aa57-4cdf-a389-bf038a9f9f65" ascendingOrDescending="UNSPECIFIED" column-ref="COL89" name="id" physicalName="id" />
     </index>
    </folder>
@@ -347,7 +356,7 @@
     <column id="COL98" populated="true" UUID="e5c51a5e-ee96-4c66-9a82-e306d58920ca" autoIncrement="false" defaultValue="" name="password" nullable="0" physicalName="password" precision="40" referenceCount="1" scale="0" source-column-ref="COL46" sourceDataTypeName="CHAR" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks></remarks>
     </column>
-    <column id="COL99" populated="true" UUID="f0d50e8d-aec3-4f2b-ba64-97867370f9ea" autoIncrement="false" defaultValue="" name="group_id" nullable="0" physicalName="group_id" precision="0" referenceCount="1" scale="0" source-column-ref="COL47" sourceDataTypeName="INT" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL99" populated="true" UUID="f0d50e8d-aec3-4f2b-ba64-97867370f9ea" autoIncrement="false" defaultValue="" name="group_id" nullable="0" physicalName="group_id" precision="36" referenceCount="1" scale="0" source-column-ref="COL47" sourceDataTypeName="INT" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL100" populated="true" UUID="7454f36b-b2a6-4450-933b-a70c21282c48" autoIncrement="false" defaultValue="" name="created" nullable="1" physicalName="created" precision="0" referenceCount="1" scale="0" source-column-ref="COL48" sourceDataTypeName="DATETIME" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
@@ -362,7 +371,7 @@
     <folder id="FOLTAB952" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB954" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX102" populated="true" UUID="042178db-482c-4071-b8ad-ad51362e1e96" clustered="false" name="users_PK" physicalName="users_PK" primaryKeyIndex="true" qualifier="" unique="true" >
+    <index id="IDX102" populated="true" UUID="042178db-482c-4071-b8ad-ad51362e1e96" clustered="false" name="users_PK" physicalName="users_pk" primaryKeyIndex="true" qualifier="" unique="true" >
      <index-column id="IDC103" populated="true" UUID="d408dbf7-69cb-4535-b1c5-727930fb9938" ascendingOrDescending="UNSPECIFIED" column-ref="COL96" name="id" physicalName="id" />
     </index>
     <index id="IDX104" populated="true" UUID="b280a44c-91d0-47a1-8def-8e016c5167f0" clustered="false" index-type="BTREE" name="username" physicalName="username" primaryKeyIndex="false" qualifier="" unique="true" >
@@ -577,8 +586,13 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false" target-catalog="torta_social"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <compare-dm-settings  ddlGenerator="ca.sqlpower.architect.ddl.MySqlDDLGenerator"  outputFormatAsString="SQL"  saveFlag="true" >
+  <source-stuff   datastoreTypeAsString="DATABASE"   connectName="tortaRolera"   filePath=""  />
+  <target-stuff   datastoreTypeAsString="PROJECT"   filePath=""  />
+  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ </compare-dm-settings>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB55" x="16" y="17" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>

@@ -11,8 +11,8 @@
       <?php echo h($party['Party']['created']); ?>
       &nbsp;
     </dd>
-    <dt><?php echo __('Modelo de planilla'); ?></dt>
-    <dd>
+<!--    <dt><?php echo __('Modelo de planilla'); ?></dt>
+    <dd>-->
       <?php echo $this->Html->link($party['SpreadsheetModel']['id'], array('controller' => 'spreadsheet_models', 'action' => 'view', $party['SpreadsheetModel']['id'])); ?>
       &nbsp;
     </dd>
@@ -25,13 +25,17 @@
 </div>
 <nav>
   <ul>
-    <li><?php echo $this->Html->link(__('Editar partida'), array('action' => 'edit', $party['Party']['id'])); ?> </li>
-    <li><?php echo $this->Form->postLink(__('Borrar partida'), array('action' => 'delete', $party['Party']['id']), null, __('¿Estas seguro de borrar %s? No seas gil, no hay vuelta atras.', $party['Party']['title'])); ?> </li>
     <li><?php echo $this->Html->link(__('Partidas'), array('action' => 'index')); ?> </li>
     <li><?php echo $this->Html->link(__('Hacer otra partida'), array('action' => 'add')); ?> </li>
-    <li><?php echo $this->Html->link(__('Modelo de planilla'), array('controller' => 'spreadsheet_models', 'action' => 'add')); ?> </li>
-    <li><?php echo $this->Html->link(__('Escenas'), array('controller' => 'scenes', 'action' => 'index')); ?> </li>
-    <li><?php echo $this->Html->link(__('Nueva escena'), array('controller' => 'scenes', 'action' => 'add')); ?> </li>
+    <?php if ($canEdit): ?>
+      <li><?php echo $this->Html->link(__('Editar partida'), array('action' => 'edit', $party['Party']['id'])); ?> </li>
+      <li><?php echo $this->Form->postLink(__('Borrar partida'), array('action' => 'delete', $party['Party']['id']), null, __('¿Estas seguro de borrar %s? No seas gil, no hay vuelta atras.', $party['Party']['title'])); ?> </li>
+      <li><?php echo $this->Html->link(__('Hacer otra partida'), array('action' => 'add')); ?> </li>
+  <!--    <li><?php echo $this->Html->link(__('Modelo de planilla'), array('controller' => 'spreadsheet_models', 'action' => 'add')); ?> </li>-->
+      <li><?php echo $this->Html->link(__('Escenas'), array('controller' => 'scenes', 'action' => 'index')); ?> </li>
+      <li><?php echo $this->Html->link(__('Nueva escena'), array('controller' => 'scenes', 'action' => 'add')); ?> </li>
+
+    <?php endif; ?>
   </ul>
 </nav>
 <div class="related">
@@ -54,11 +58,14 @@
     </table>
   <?php endif; ?>
 
-  <div class="actions">
-    <ul>
-      <li><?php echo $this->Html->link(__('Nuevo personaje'), array('controller' => 'characters', 'action' => 'add')); ?> </li>
-    </ul>
-  </div>
+  <?php if ($canEdit): ?>
+    <div class="actions">
+      <ul>
+        <li><?php echo $this->Html->link(__('Nuevo personaje'), array('controller' => 'characters', 'action' => 'add', $party['Party']['id'])); ?> </li>
+      </ul>
+    </div>
+  <?php endif; ?>
+
 </div>
 <div class="related">
   <h3><?php echo __('Escenas'); ?></h3>
@@ -85,9 +92,11 @@
     </table>
   <?php endif; ?>
 
-  <div class="actions">
-    <ul>
-      <li><?php echo $this->Html->link(__('Nueva escena'), array('controller' => 'scenes', 'action' => 'add')); ?> </li>
-    </ul>
-  </div>
+  <?php if ($canEdit): ?>
+    <div class="actions">
+      <ul>
+        <li><?php echo $this->Html->link(__('Nueva escena'), array('controller' => 'scenes', 'action' => 'add')); ?> </li>
+      </ul>
+    </div>
+  <?php endif; ?>
 </div>
