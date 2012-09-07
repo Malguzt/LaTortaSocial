@@ -80,4 +80,19 @@ class Post extends AppModel {
       )
   );
 
+  function parentNode() {
+    if (!$this->id && empty($this->data)) {
+      return null;
+    }
+    $data = $this->data;
+    if (empty($this->data)) {
+      $data = $this->read();
+    }
+    if (!$data['Post']['scene_id']) {
+      return null;
+    } else {
+      return array('Scene' => array('id' => $data['Post']['scene_id']));
+    }
+  }
+
 }

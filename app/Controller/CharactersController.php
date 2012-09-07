@@ -19,6 +19,11 @@ class CharactersController extends AppController {
               && $this->Acl->check(array('User' => array('id' => $this->Session->read('Auth.User.id'))), array('Party' => array('id' => $this->request->params['pass'][0])))) {
         return true;
       }
+      if (in_array($this->request->params['action'], array('edit', 'delete'))  //Si se quiere agregar un personaje a una partida
+              && !empty($this->request->params['pass'][0])
+              && $this->Acl->check(array('User' => array('id' => $this->Session->read('Auth.User.id'))), array('Character' => array('id' => $this->request->params['pass'][0])))) {
+        return true;
+      }
     } else {
       return true;
     }
