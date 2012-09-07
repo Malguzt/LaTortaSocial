@@ -67,16 +67,12 @@ class CharactersController extends AppController {
     }
     if ($this->request->is('post')) {
       $this->request->data['Character']['party_id'] = $partyId;
+
       $this->Character->create();
       if ($this->Character->save($this->request->data)) {
-        $this->Acl->allow(array(
-            'User' => array(
-                'id' => $this->request->data['Character']['user_id']
-                )), array(
-            'Character' => array(
-                'id' => $this->Character->id
-            )
-        ));
+        $user = array('User' => array('id' => $this->request->data['Character']['user_id']));
+        $character = array('Character' => array('id' => $this->Character->id),'view');
+        $this->Acl-> allow($user, $character);
         $this->Session->setFlash(__('The character has been saved'));
         $this->redirect(array('action' => 'index'));
       } else {
